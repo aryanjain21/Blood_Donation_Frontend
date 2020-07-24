@@ -1,0 +1,58 @@
+<!-- <nav class="navbar sticky-top navbar-inverse" *ngIf="flag">
+    <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Hello ,{{email}}</a>
+        </div>
+  
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" [ngSwitch]="email">
+          <ul class="nav navbar-nav">
+  
+            <li><a routerLink="/edit">Edit Profile</a></li>
+            <li><a routerLink="/changepassword" routerLinkActive="active">Change Password</a></li>
+  
+  
+            <ul class="nav navbar-nav" *ngIf="isManager()">
+            <li><a routerLink="/checkbloodavaliability">Check Blood Availability</a></li>
+            <li><a routerLink="/listofdonatedblood">List of Donate Blood</a></li>
+            <li><a routerLink="/listofrequestedblood">List of Requested Blood</a></li>
+            <li><a routerLink="/listofalldonors">List Of All Donor</a></li>
+            <li><a routerLink="/listofallpatient">List Of All Patient</a></li>
+            <li><a routerLink="/addcamp">Add Camp</a></li>
+            <li><a routerLink="/campdetails">Camp Details</a></li>
+            <li><a routerLink="/viewstock">Stock Details</a></li>
+            <li><a routerLink="/donormedicaldetails">Donor Medical Details</a></li> -->
+            <!-- <li><a routerLink="/addcamp">Add Camp</a></li> -->
+<!--   
+            <li> <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search Book by Name">
+              </div>
+              <button type="button" (click)="onSearch()" class="btn btn-default">Search</button>
+            </form></li>
+          </ul>
+  
+  
+          <ul class="nav navbar-nav" *ngSwitchCase="'User'">
+            <li><a routerLink="/home/listofissuedBook">Issued Books</a></li>
+            <li><a routerLink="/home/userpaymenthistoty">Payment History</a></li>
+            <li><a routerLink="/home/help">help</a></li>
+  
+            <li> <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search Book by Name">
+              </div>
+              <button type="button" (click)="onSearch()" class="btn btn-default">Search</button>
+            </form></li>
+          </ul>
+  
+          <ul class="nav navbar-nav navbar-right">
+            <li><button (click)="onLogout()" style="margin-top: 10px;" class="btn btn-link">Logout</button></li>
+          </ul>
+        </ul>
+        </div>
+    </div>
+  </nav> -->
+  
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>

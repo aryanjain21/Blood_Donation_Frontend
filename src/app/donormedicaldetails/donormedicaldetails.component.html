@@ -1,0 +1,46 @@
+<div class="jumbotron">
+    <h3 class="display-4">Donor Medical Form</h3>
+    <div class="container">
+        <form  #formsubmit="ngForm" (ngSubmit)="onAddStock(formsubmit)" style="margin-top: 4cm;">
+      
+       
+            <div class="form-group">
+                <label for="">Donor ID</label>
+                <input  [(ngModel)]="newDonation.donor_id.u_id" id="donor_id" name="donor_id" type="text" class="form-control" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="">Blood Amount</label>
+                <input [(ngModel)]="newDonation.donated_amount" id="newDonation.donated_amount" name="newDonation.donated_amount" type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="">Medical History</label>
+                <div class="row">
+                  <div class="checkbox">
+                  <label><input [(ngModel)]="newDonation.hepatitsB" name="newDonation.hepatitsB" type="checkbox" value="" required="required">Hepatitis B</label>
+                  </div>
+                  <div class="checkbox">
+                  <label><input [(ngModel)]="newDonation.hepatitsC" name="newDonation.hepatitsC" type="checkbox" value="" required="required">Hepatitis C</label>
+                  </div>
+                  <div class="checkbox">
+                  <label><input [(ngModel)]="newDonation.malaria" name="newDonation.malaria" type="checkbox" value="" required="required">Malaria </label>
+                  </div>
+                  <div class="checkbox">
+                  <label><input [(ngModel)]="newDonation.hiv" name="newDonation.hiv" type="checkbox" value="" required="required">HIV</label>
+                  </div>
+                            
+                </div>
+            </div>
+          
+            <div class="form-group">
+              <button type="submit" class="btn btn-success">ADD </button>
+            </div>     
+          </form>  
+            
+    </div>
+    
+</div>
+  
+  
+  
+

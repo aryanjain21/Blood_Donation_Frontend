@@ -1,0 +1,22 @@
+<h2>Requst Details</h2>
+
+<h5>Request Status True: Approve</h5>
+<h5>Request Status False: Not Approve</h5>
+<table class="table table-striped table-hover">
+  <thead>
+      <th scope="col">Request No</th>
+      <th scope="col">Blood Group</th>
+      <th scope="col">Require Date</th>
+      <th scope="col">Require Quantity</th>
+      <th scope="col">Request Status</th>
+  </thead>
+  <tbody>
+      <tr *ngFor="let user of list">
+          <td>{{user.req_id}}</td>
+          <td>{{user.blood_group}}</td>
+          <td>{{user.require_date}}</td>
+          <td>{{user.requsted_qty}}</td>
+          <td>{{user.request_status}}</td>
+      </tr>
+  </tbody>
+</table>

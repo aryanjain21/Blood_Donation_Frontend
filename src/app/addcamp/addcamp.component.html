@@ -1,0 +1,43 @@
+<div class="jumbotron jumbotron-fluid">
+    <h3 class="display-4">Add Camp Details</h3>
+   <div class="container">
+    <form #formsubmit="ngForm" (ngSubmit)="onAddCamp(formsubmit)" style="margin-top: 4cm;">
+  
+        <!-- <div class="form-group">
+          <label for="">Cordinator Name</label>
+          <input [(ngModel)]="name" name="user.name" type="text" class="form-control">
+        </div> -->
+
+        <div class="form-group">
+            <label for="">Organizer Id</label>
+            <input [(ngModel)]="camp.organizer_id.u_id" name="camp.organizer_id.u_id" type="text" class="form-control">
+          </div>
+
+        <div class="form-group">
+          <label for="">Venue</label>
+          <input [(ngModel)]="camp.camp_venue"  id="camp.camp_venue" name="camp.camp_venue" type="text" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="">Camp Date</label>
+          <input [(ngModel)]="camp.camp_date" id="camp.camp_date" name="camp.camp_date" type="date" >
+      </div>
+        
+      
+      
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">ADD CAMP</button>
+            
+        </div>
+      
+      
+      
+      </form>  
+   
+   </div>
+        
+</div>
+
+  
+  
+  

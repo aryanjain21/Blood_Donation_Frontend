@@ -1,0 +1,45 @@
+<div class="jumbotron jumbotron-fluid">
+    <h3 class="display-4">Add Stock Details</h3>
+   <div class="container">
+    <form #formsubmit="ngForm" (ngSubmit)="onAddStock(formsubmit)" style="margin-top: 4cm;">
+  
+        <!-- <div class="form-group">
+          <label for="">Cordinator Name</label>
+          <input [(ngModel)]="name" name="user.name" type="text" class="form-control">
+        </div> -->
+
+        <div class="form-group">
+            <label for="">Donor Id</label>
+            <input [(ngModel)]="stock.m_id.u_id" name="stock.mgr_id.u_id" type="text" class="form-control">
+          </div>
+
+        <div class="form-group">
+          <label for="">Blood Group</label>
+          <input [(ngModel)]="stock.blood_group"  id="stock.blood_group" name="stock.blood_group" type="text" class="form-control">
+        </div>
+        
+        <div class="form-group">
+            <label for="">Blood Amount</label>
+            <input [(ngModel)]="stock.blood_amt"  id="stock.blood_amt" name="stock.blood_amt" type="text" class="form-control">
+          </div>
+
+        <div class="form-group">
+          <label for="">Recieve Date</label>
+          <input [(ngModel)]="stock.rec_date" id="stock.rec_date" name="stock.rec_date" type="date" >
+      </div>
+    
+      <div class="form-group">
+        <label for="">Expire Date</label>
+        <input [(ngModel)]="stock.expire_date" id="stock.expire_date" name="stock.expire_date" type="date" >
+    </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">ADD STOCK</button>        
+        </div>
+      </form>  
+   </div>
+</div>
+
+  
+  
+  

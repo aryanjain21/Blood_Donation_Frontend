@@ -1,0 +1,125 @@
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"> <img style =  " height:0.9cm;"src="./assets/image/logo.jpeg" ></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+     
+        <ul class="nav navbar-nav navbar-right" id="nav-link"  *ngIf="isAdmin()">
+              
+            <li><a class="nav-link" data-toggle="pill"routerLink="/editadmin">Edit Profile</a></li>
+            
+            <li><a class="nav-link" data-toggle="pill"routerLink="/changepassword">Change Password</a></li>
+
+            <li><a class="nav-link" data-toggle="pill"routerLink="/approvemanager">Pending Manager List</a></li>
+
+            <li><a class="nav-link" data-toggle="pill"routerLink="/approvedmanager">Approved Manager List</a></li>
+              
+            <li><a class="nav-link" data-toggle="pill" routerLink="/donorreport">Donor Report</a></li>
+
+            <li><a class="nav-link" data-toggle="pill" routerLink="/patientreport">Patient Report</a></li>
+            
+            <li ><button (click)="onLogout()" style="margin-top: 10px;" class="btn btn-link"><span class="glyphicon glyphicon-log-in"></span>Logout</button></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" id="nav-link"  *ngIf="isManager()">
+
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/edit">Edit Profile</a></li>
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/changepassword">Change Password</a></li>
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/managerstatuslist">Your Approve Status</a></li>
+            <li ><button (click)="onLogout()" style="margin-top: 10px;" class="btn btn-link"><span class="glyphicon glyphicon-log-in"></span>Logout</button></li>
+  
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" id="nav-link"  *ngIf="isManagerApproved()">
+
+            <li><a class="nav-link" data-toggle="pill"routerLink="/edit">Edit Profile</a></li>    
+            <li><a class="nav-link" data-toggle="pill"routerLink="/changepassword">Change Password</a></li>
+        
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/checkbloodavaliability">Blood Availability</a></li>
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/listofdonatedblood">Donated Blood</a></li> 
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/listofrequestedblood">Requested Blood</a></li>
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/listofalldonors">Donor List</a></li>
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/requestpending">Pending Request List</a></li>
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/requestapproved">Approved Request List</a></li>
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/listofallpatient">Requester List</a></li>
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/addcamp">Add Camp</a></li>
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/campdetails">Camp Details</a></li>
+            <!-- <li><a  class="nav-link" data-toggle="pill" routerLink="/addstock">Add Stock</a></li> -->
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/viewstock">View Stock</a></li>
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/donormedicaldetails">Donor Medical Details</a></li>
+       
+            <li ><button (click)="onLogout()" style="margin-top: 10px;" class="btn btn-link"><span class="glyphicon glyphicon-log-in"></span>Logout</button></li>
+  
+        </ul>
+
+
+        <ul class="nav navbar-nav navbar-right" id="nav-link"  *ngIf="isDonor()">
+            <li><a class="nav-link" data-toggle="pill"routerLink="/edit">Edit Profile</a></li>
+                
+            <li><a class="nav-link" data-toggle="pill"routerLink="/changepassword">Change Password</a></li>
+        
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/donorhistory">Donation History</a></li> 
+        
+            <li ><button (click)="onLogout()" style="margin-top: 10px;" class="btn btn-link"><span class="glyphicon glyphicon-log-in"></span>Logout</button></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" id="nav-link"  *ngIf="isPatient()">
+            <li><a class="nav-link" data-toggle="pill"routerLink="/edit">Edit Profile</a></li>
+                
+            <li><a class="nav-link" data-toggle="pill"routerLink="/changepassword">Change Password</a></li>
+ 
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/bloodrequest">Blood Request</a></li>
+
+            <li><a  class="nav-link" data-toggle="pill" routerLink="/patientrequest">Request History</a></li>
+
+            <li ><button *ngIf="IsLoggedIn()" (click)="onLogout()" style="margin-top: 10px;" class="btn btn-link"><span class="glyphicon glyphicon-log-in"></span>Logout</button></li>
+
+         </ul> 
+
+        <ul class="nav navbar-nav navbar-right">
+            <li *ngIf="!IsLoggedIn()"><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" id="nav-link">
+            <li class="active" *ngIf="!isManagerApproved()">
+                <a routerLink="/home">Home</a>
+            </li>
+
+            <li *ngIf="!IsLoggedIn()">
+                <a routerLink="/register">Register</a>
+            </li>
+            <li *ngIf="!isManagerApproved()"><a routerLink="/request">Requested Blood</a></li>
+           
+            <li *ngIf="!isManagerApproved()">
+                <a routerLink="/about">About Us</a>
+            </li>
+
+            <li *ngIf="!IsLoggedIn()">
+                <a routerLink="/bloodtips">Blood Tips</a>
+            </li>
+
+            <li *ngIf="!isManagerApproved()">
+                <a routerLink="/contact">Contact Us</a>
+            </li>    
+        </ul> 
+    </div>
+  </div>
+</nav>
+
+
+        <router-outlet></router-outlet>
+
+
+ 
+
+    
+<hr>
+    

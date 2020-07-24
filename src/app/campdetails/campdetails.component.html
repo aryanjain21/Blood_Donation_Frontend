@@ -1,0 +1,29 @@
+
+<table class="table table-striped table-hover">
+    <thead>
+            <tr>
+                    <th scope="col">Id</th>
+                    <!-- <th scope="col">Organizer Name</th> -->
+                    <th scope="col">Organizer Name</th>
+                    <th scope="col">Camp Venue</th>
+                    <th scope="col">Camp Date</th> 
+                    <!-- <th scope="col">Blood Amount</th> -->
+            </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let c of list">
+                <!-- c[3]=(new Date(c[3]*1000)).toISOString();     -->
+                    <td>{{c.camp_id}}</td>
+                    <td>{{c.organizer_id.fName}}</td>
+                    <td>{{c.camp_venue}}</td>
+                    <td>{{c.camp_date}}</td>
+                    <!-- <td>{{c.blood_amount}}</td> -->
+                    <!-- <td><a href="//editCamp/{{camp.camp_id}}">Edit</a></td> -->
+                    <!-- <td><a routerLink="/editcamp/{{c.camp_id}}">Edit</a></td>
+                    <td><a routerLink="/delete/{{c.camp_id}}">Delete</a></td>  -->
+                </tr>
+    </tbody>
+</table>
+
+
+

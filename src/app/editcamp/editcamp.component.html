@@ -1,0 +1,48 @@
+<h1 style="text-align: center">Edit Camp</h1>
+
+<div class="jumbotron" style="background-color: lightsteelblue;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <form #myForm="ngForm" (ngSubmit)="onEdit(myForm)">
+            <!-- <div class="form-group">
+              <label for="">ID</label>
+              <input [(ngModel)]="id" name="id" type="number" class="form-control">
+            </div> -->
+            <div class="form-group">
+              <label for="">Organizer Name</label>
+              <input [(ngModel)]="list.organizer_id.fName" name="fName" type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="">Contact</label>
+              <input [(ngModel)]="list.organizer_id.contact" name="contact" type="text" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="">Camp Venu</label>
+                <input [(ngModel)]="list.camp_venue" name="camp_venue" type="text" class="form-control">
+            </div>
+            
+            <div class="form-group">
+              <label for="">Camp Date</label>
+              <input [(ngModel)]="list.camp_date" name="camp_date" type="date" class="form-control">
+            </div>
+            <!-- <div class="form-group">
+                <label for="">Blood Donate</label>
+                <input [(ngModel)]="donate" name="donate" type="number" class="form-control">
+            </div> -->
+            
+          <div class="form-group">
+              <button type="submit" class="btn btn-success">Update</button>
+              <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px;">Cancel</button>
+          </div>
+        </form>
+        </div>
+      </div>
+      
+  </div>
+</div>
+
+

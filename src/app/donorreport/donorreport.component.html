@@ -1,0 +1,29 @@
+<table class="table table-striped table-hover">
+    <thead>
+            <th scope="col">Donor No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Blood Group</th>
+            <!-- <th scope="col">Camp Venu</th>
+            <th scope="col">Camp Date</th> -->
+            <th scope="col">Donation Date</th>
+            <th scope="col">Donation Amount</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th> 
+    </thead>
+    <tbody>
+            <tr *ngFor="let user of list">
+                    <td>{{user.donate_id}}</td>
+                    <td>{{user.donor_id.fName}}</td>
+                    <td>{{user.donor_id.gender}}</td>
+                    <td>{{user.donor_id.blood_group}}</td>
+                    <!-- <td>{{user.camp_id.camp_venue}}</td>
+                    <td>{{user.camp_id.camp_date}}</td> -->
+                    <td>{{user.donate_date}}</td>
+                    <td>{{user.donated_amount}}</td>
+                    <td>{{user.donor_id.addr.city}}</td>
+                    <td>{{user.donor_id.addr.state}}</td>
+            </tr>
+    </tbody>
+</table>
+

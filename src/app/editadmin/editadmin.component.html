@@ -1,0 +1,59 @@
+<h1>Edit Admin</h1>
+
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+              <form #myForm="ngForm" (ngSubmit)="onUpdate(myForm)">
+                <div class="form-group">
+                  <label for="">First Name</label>
+                  <input [(ngModel)]="user.fName" name="fName" type="text" readonly class="form-control">
+                </div>
+            <div class="form-group">
+                <label for="">Last Name</label>
+                <input [(ngModel)]="user.lName" name="lName" type="text" readonly class="form-control">
+            </div>
+            
+            <div class="form-group">
+              <label for="">Mobile No</label>
+              <input [(ngModel)]="user.contact" name="contact" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input [(ngModel)]="user.email" name="email" type="email" readonly class="form-control">
+            </div>
+            <!-- <div class="form-group">
+              <label for="">Address</label>
+              <input [(ngModel)]="address" type="text" class="form-control">
+            </div> -->
+            <div class="form-group">
+                <label for="">City</label>
+                <select [(ngModel)]="user.addr.city" name="city">
+                  <option *ngFor="let c of city"  [ngValue]="c">{{c}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="">State</label>
+                <select [(ngModel)]="user.addr.state" name="state">
+                  <option *ngFor="let s of state"  [ngValue]="s">{{s}}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="">Pin Code</label>
+                <input [(ngModel)]="user.addr.pincode" name="pincode" type="text" class="form-control">
+              </div>
+  
+            <div class="form-group">
+                <button class="btn btn-success">Submit</button>
+                <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px;">Cancel</button>
+            </div>
+              </form>
+          </div>
+        </div>
+        
+        
+        
+  </div>
+</div>
+

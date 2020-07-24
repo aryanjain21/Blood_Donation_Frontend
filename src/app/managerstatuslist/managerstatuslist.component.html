@@ -1,0 +1,30 @@
+
+<div class="table-responsive " style="float: none;">
+    <table class="table table-stripped">
+        <caption>Approved Status</caption>
+      <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Email</th>
+          <th scope="col">City</th>
+          <th scope="col">Status</th>
+   
+         
+      </tr>
+      <tr *ngFor="let manager of managerlist">
+        <td>{{manager.u_id}}</td>
+        <td>{{manager.fName}}</td>
+        <td>{{manager.contact}}</td>
+        <td>{{manager.email}}</td>
+        <td>{{manager.addr.city}}</td>
+        <td>{{manager.m_status}}</td>
+        
+        
+
+         <!-- <td><button type="button" (click)="onApprove(manager.u_id)" class="btn btn-success">Approve</button></td> -->
+        <br><br>
+      </tr>
+    </table>
+    
+</div>

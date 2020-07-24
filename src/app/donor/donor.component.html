@@ -1,0 +1,37 @@
+<!-- 
+<nav class="navbar sticky-top navbar-inverse" *ngIf="flag">
+        <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Hello ,{{email}}</a>
+            </div>
+      
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" [ngSwitch]="email">
+              <ul class="nav navbar-nav">
+      
+                <li><a routerLink="/edit">Edit Profile</a></li>
+                <li><a routerLink="/changepassword" routerLinkActive="active">Change Password</a></li>
+      
+               
+              <ul class="nav navbar-nav" *ngIf="isDonor()">
+                <li><a routerLink="/donorhistory">Donation History</a></li>
+                <li><a routerLink="/home/help">Help</a></li>
+      
+                <li> <form class="navbar-form navbar-left" role="search">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <button type="button" (click)="onSearch()" class="btn btn-default">Search</button>
+                </form></li>
+              </ul>
+      
+              <ul class="nav navbar-nav navbar-right">
+                <li><button (click)="onLogout()" style="margin-top: 10px;" class="btn btn-link">Logout</button></li>
+              </ul>
+            </ul>
+            </div>
+        </div>
+      </nav> -->
+      
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>

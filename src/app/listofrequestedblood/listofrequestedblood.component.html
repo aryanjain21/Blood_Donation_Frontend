@@ -1,0 +1,27 @@
+
+<table class="table table-striped table-hover">
+    <thead>
+            <th scope="col">Request No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Blood Group</th>
+            <th scope="col">Requested Quantity</th> 
+            <th scope="col">Require Date</th>
+            <th scope="col">Request Message</th>
+    </thead>
+    <tbody>
+            <tr *ngFor="let user of list">
+                    <td>{{user.req_id}}</td>
+                    <td>{{user.requster_id.fName}}</td>
+                    <td>{{user.requster_id.gender}}</td>
+                    <td>{{user.blood_group}}</td>
+                    <td>{{user.requsted_qty}}</td>
+                    <td>{{user.require_date}}</td>
+                    <td>{{user.request_msg}}</td>
+                    <!-- <td><a routerLink="/delete/{{user.requster_id}}">Delete</a></td> -->
+                </tr>
+    </tbody>
+</table>
+
+
+

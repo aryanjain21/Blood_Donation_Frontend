@@ -1,0 +1,19 @@
+
+<table class="table table-striped table-hover">
+    <thead>
+            <th scope="col">Id</th>
+            <th scope="col">Blood Group</th>
+            <th scope="col">Blood Amount</th> 
+            <th scope="col">Require Date</th>
+            <th scope="col">Expire Date</th>
+    </thead>
+    <tbody>
+            <tr *ngFor="let user of list">
+                    <td>{{user.bloodbag_id}}</td>
+                    <td>{{user.blood_group}}</td>
+                    <td>{{user.blood_amt}}</td>
+                    <td>{{user.rec_date}}</td>
+                    <td>{{user.expire_date}}</td>
+            </tr>
+    </tbody>
+</table>

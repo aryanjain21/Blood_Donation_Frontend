@@ -1,0 +1,84 @@
+<h1>Blood Request</h1>
+
+<div class="jumbotron" style="background-color: aquamarine;">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+          <form #myForm="ngForm" (ngSubmit)="addRequest(myForm)">
+            <!-- <div class="form-group">
+              <label for="">First Name</label>
+              <input [(ngModel)]="user.requster_id.fName" name="fName" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Last Name</label>
+                <input [(ngModel)]="user.requster_id.lName" name="lName" type="text" class="form-control">
+            </div> -->
+            
+            <div class="form-group">
+                <label for="">Required Date</label>
+                <input type="date" [(ngModel)]="user.require_date" name="require_date" id="date" class="form-control">
+            </div>
+            <div class="form-group" >
+                <label for="">Blood Group</label>
+                  <select [(ngModel)]="user.blood_group" name="blood_group">
+                    <option value="A+">A+</option>
+                    <option value="B+">B+</option>
+                    <option value="O+">O+</option>
+                    <option value="A-">A-</option>
+                    <option value="B-">B-</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                  </select>
+                <!-- <input type="date" [(ngModel)]="date" name="" id="date" class="form-control"> -->
+            </div>
+            <div class="form-group">
+                    <label for="">Quantity</label>
+                    <input type="number" [(ngModel)]="user.requsted_qty" name="requsted_qty" id="quantity" class="form-control">
+            </div>
+            <div class="form-group" >
+                <label for="">Message</label>
+                    <select [(ngModel)]="user.request_msg" name="request_msg">
+                    <option value="Urgent">Urgent</option>
+                    <option value="One Day">1 Day</option>
+                    <option value="12 Hour">12 Hour</option>
+                    <option value="06 Hour">06 Hour</option>
+                    <option value="03 Hour">03 Hour</option>
+                    </select>
+                <!-- <input type="date" [(ngModel)]="date" name="" id="date" class="form-control"> -->
+            </div>
+            
+            <!-- <div class="form-group">
+              <label for="">Address</label>
+              <input [(ngModel)]="user.requster_id.addr.city" type="text" class="form-control">
+            </div> -->
+            <div class="form-group">
+              <label for="">City</label>
+              <select [(ngModel)]="user.requster_id.addr.city" name="city" >
+                <option *ngFor="let c of city">{{c}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="">State</label>
+              <select [(ngModel)]="user.requster_id.addr.state" name="state" >
+                <option *ngFor="let s of state">{{s}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="">Pin Code</label>
+              <input [(ngModel)]="user.requster_id.addr.pincode" name="pincode" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 10px;">Cancel</button>
+            </div>
+          </form>
+          </div>
+        </div>
+        
+  </div>
+</div>
+
+
+
